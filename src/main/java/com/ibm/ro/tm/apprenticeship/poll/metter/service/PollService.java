@@ -37,7 +37,7 @@ public class PollService {
 //	}
 //	
 	public Poll add(Poll poll) {
-		if(poll.getStartingDate()!=null && poll.getClosingDate() != null ) {
+		if(poll.getStartingDate()!=null && poll.getClosingDate() != null && poll.getId() != 0 ) {
 		Poll newPoll = null;		
 		newPoll = pollRepository.save(poll);		
 		return newPoll;
